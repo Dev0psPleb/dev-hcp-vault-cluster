@@ -11,15 +11,23 @@ jobs:
     steps:
     - name: 'Checkout'
       uses: actions/checkout@main
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
+      with:
+        cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+
     - name: 'Terraform init'
       uses: hashicorp/terraform-github-actions@main
       with:
         tf_actions_subcommand: 'init'
         tf_actions_working_dir: 'terraform'
         tf_actions_comment: true
+      run: terraform init
+
     - name: 'Terraform import' 
       with: 
-        tf_actions_subcommand: 'import hcp_vault_cluster.vault-cluster vault-cluster'
+        tf_actions_subcommand: import
         tf_actions_working_dir: 'terraform'
         tf_actions_comment: true
+      run: terraform import hcp_vault_cluster.vault-cluster vault-cluster
     
