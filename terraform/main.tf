@@ -6,9 +6,14 @@ terraform {
       name = "dev-hcp-vault-cluster"
     }
   }
+  required_providers {
+    hcp = {
+      source = "hashicorp/hcp"
+    }
+  }
 }
 
-provider "aws" {}
+provider "hcp" {}
 
 resource "hcp_hvn" "vault" {
   hvn_id         = "vault"
