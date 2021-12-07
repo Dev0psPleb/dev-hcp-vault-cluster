@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to dev hashicorp vault cluster 👋</h1>
+<h1 align="center">dev - hashicorp vault cluster 👋</h1>
 <p>
   <a href="https://www.npmjs.com/package/dev hashicorp vault cluster" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/dev hashicorp vault cluster.svg">
