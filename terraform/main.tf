@@ -1,11 +1,11 @@
 terraform {
-    backend "remote" {
-        organization = "BrynardSecurity"
-        
-        workspaces {
-            name = "dev-hcp-vault-cluster"
-        }
+  backend "remote" {
+    organization = "BrynardSecurity"
+
+    workspaces {
+      name = "dev-hcp-vault-cluster"
     }
+  }
 }
 
 provider "aws" {}
