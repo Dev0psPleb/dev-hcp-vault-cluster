@@ -7,6 +7,9 @@ terraform {
         }
     }
 }
+
+provider "aws" {}
+
 resource "hcp_hvn" "vault" {
   hvn_id         = "vault"
   cloud_provider = "aws"
